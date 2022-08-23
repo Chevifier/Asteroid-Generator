@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Free Camera/Free_Camera.gd" type="Script" id=1]
+
+[sub_resource type="SphereShape" id=1]
+
+[node name="Free_Camera" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+far = 10000.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
